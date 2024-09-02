@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Input Form</title>
+</head>
+<body>
+
+    <h2>Loan Application Form</h2>
+    
+    <form action="/" method='POST' id="loanForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+
+        <label for="homeStatus">Home Status:</label>
+        <select id="homeStatus" name="homeStatus" required>
+            <option value="owned">Owned</option>
+            <option value="rented">Rented</option>
+        </select><br><br>
+
+        <label for="Previous Loan">Previous Loan :</label>
+        <select id="Previous Loan" name="Previous Loan" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="loanAmount">Loan Amount ($):</label>
+        <input type="range" id="loanAmount" name="loanAmount" min=500 max=200000 step=100 value=20000 oninput="updateValue('loanAmount', this.value)">
+        <span id="loanAmountValue">20000</span><br><br>
+
+        <label for="emiDuration">EMI Duration (months):</label>
+        <input type="range" id="emiDuration" name="emiDuration" min=36 max=60 step=24 value=36 oninput="updateValue('emiDuration', this.value)">
+        <span id="emiDurationValue">36</span><br><br>
+
+        <label for="interestRate">Interest Rate (%):</label>
+        <input type="range" id="interestRate" name="interestRate" min=5 max=25 step=0.5 value=9 oninput="updateValue('interestRate', this.value)">
+        <span id="interestRateValue">9</span><br><br>
+
+        <label for="employmentLength">Employment Length (years):</label>
+        <input type="range" id="employmentLength" name="employmentLength" min=0 max=10 step=1 value=5 oninput="updateValue('employmentLength', this.value)">
+        <span id="employmentLengthValue">5</span><br><br>
+
+        <label for="annualIncome">Annual Income ($):</label>
+        <input type="range" id="annualIncome" name="annualIncome" min=4000 max=150000 step=1000 value=50000 oninput="updateValue('annualIncome', this.value)">
+        <span id="annualIncomeValue">50000</span><br><br>
+
+        <label for="Purpose">Purpose :</label>
+        <input type="text" id="Purpose" name="Purpose" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
